@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.example.model">
+  <class name="User" table="user">
+    <id name="userId" column="user_id">
+      <generator class="native"/>
+    </id>
+  	<property name="name" />
+  	<bag name="items" inverse="true" lazy="true" >
+  	  <key column="userId"></key>
+  	  <one-to-many not-found="ignore" class="Item"/>
+  	  
+  	</bag>
+  </class>
+
+</hibernate-mapping>

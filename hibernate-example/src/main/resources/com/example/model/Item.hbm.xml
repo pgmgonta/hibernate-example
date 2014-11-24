@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.example.model">
+  <class name="Item" table="item">
+    <id name="itemId">
+      <generator class="native"/>
+    </id>
+  	<property name="name" />
+  	<property name="userId" />
+  	
+  	<!--  <many-to-one name="user" column="userId" insert="false" update="false" not-null="false" foreign-key="none"></many-to-one> -->
+  </class>
+
+</hibernate-mapping>
