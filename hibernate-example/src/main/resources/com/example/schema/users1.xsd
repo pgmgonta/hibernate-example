@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="users" type="users"/>
+
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element name="items" type="arrayList" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="userId" type="xs:long" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="arrayList">
+    <xs:complexContent>
+      <xs:extension base="abstractList">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractList" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="abstractCollection">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractCollection" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="item">
+    <xs:sequence/>
+    <xs:attribute name="itemId" type="xs:long"/>
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="userId" type="xs:long"/>
+  </xs:complexType>
+
+  <xs:complexType name="users">
+    <xs:sequence>
+      <xs:element name="user" type="user" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

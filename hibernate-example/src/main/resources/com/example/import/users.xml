@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/users1.xsd">
+  <user name="aaa" userId="0">
+    <items/>
+  </user>
+  <user name="bbb" userId="1">
+  
+  </user>
+</users>

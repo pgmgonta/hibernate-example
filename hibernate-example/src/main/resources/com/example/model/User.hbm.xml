@@ -9,7 +9,7 @@
       <generator class="native"/>
     </id>
   	<property name="name" />
-  	<bag name="items" inverse="true" lazy="true" >
+  	<bag name="items" inverse="true" lazy="false" >
   	  <key column="userId"></key>
   	  <one-to-many not-found="ignore" class="Item"/>
   	  
